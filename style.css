@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+.wrapper {
+  width: 400px;
+  height: 304px;
+  margin: 10px auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+.wrapper > ul {
+  position: relative;
+}
+.wrapper li {
+  transition: all .5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.wrapper li.current {
+  transform: translateX(0);
+  z-index: 1;
+}
+.wrapper li.leave {
+  transform: translateX(-100%);
+}
+.wrapper li.enter {
+  transform: translateX(100%);
+}
+.wrapper li.last {
+  transform: translateX(100%);
+}
+
+
+.allButtons {
+  display: flex;
+  justify-content: center;
+}
+.allButtons li {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.red {
+  color: red;
+}
